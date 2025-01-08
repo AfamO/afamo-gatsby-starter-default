@@ -3,9 +3,15 @@
 export default (request, context) => {
   try {
     const url = new URL(request.url)
+    console.log("My requates=="+JSON.stringify(context.params));
     const subject = url.searchParams.get('name') || 'World'
-
-    return new Response(`Hello ${subject}`)
+    const resp = {
+      message: `Hello ${subject}, this is a secret message!`,
+      date: new Date().toISOString(),
+      id: context.params.id,
+      sender:"Netlify"
+    }
+    return new Response(JSON.stringify(resp));
   } catch (error) {
     return new Response(error.toString(), {
       status: 500,
