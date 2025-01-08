@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 const AboutPage = () => {
     return (
         <Layout p>
-        <p>Hi there! I'm the proud creator of this site, which I built with Gatsby.</p>
+        <p>My Cognitive Experiment that measures participants cognitive skills.</p>
         </Layout>
     )
 }
