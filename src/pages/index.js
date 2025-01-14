@@ -8,14 +8,11 @@ const IndexPage = () => {
     <Layout pageTitle="Welcome Page">
       <h2>Welcome to My Cognitive Measure Experiment</h2>
     
-    
       <form action="/instruction">
       <label for="studentIdLabel">Enter the participant's student ID::</label><br/><br/><br/>
       <input type="text" id="studentIdLabel" name="studentId"/><br/><br/><br/>
       <button type="submit">Continue</button>
       </form>
-
-      
       </Layout>
   );
 }
