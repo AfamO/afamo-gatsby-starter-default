@@ -102,7 +102,7 @@ const DigitSpan = () => {
           <p>{status}</p>
           <div>Score: {score}</div>
         </>
-      )}<br/><br/>
+      )}<br/><br/><br/>
       Click <Link to='/task2_instruction'>Next</Link> to continue  with the instruction for task 2.<br/>
       
     </div>
