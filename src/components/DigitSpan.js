@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
+import { Link } from 'gatsby';
 
 const DigitSpan = () => {
   const [sequence, setSequence] = useState([]);
@@ -101,7 +102,9 @@ const DigitSpan = () => {
           <p>{status}</p>
           <div>Score: {score}</div>
         </>
-      )}
+      )}<br/><br/>
+      Click <Link to='/task2_instruction'>Next</Link> to continue  with the instruction for task 2.<br/>
+      
     </div>
   );
 };
