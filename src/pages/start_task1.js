@@ -7,8 +7,8 @@ import DigitSpan from "../components/DigitSpan.js"
 const StartTask1Page = () => {
     return (
         <Layout pageTitle="DigitSpan Page">
-    <DigitSpan />
-    </Layout>    )
+        <DigitSpan />
+        </Layout> )
 }
         
 

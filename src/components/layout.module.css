@@ -42,3 +42,21 @@ p {  font-family: Arial, sans-serif; /* Use a clean, readable font */
     margin: 0 0 1em; /* Add space below paragraphs */
     text-align: left; /* Align text to the left */
 }
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  .square {
+    width: 100px;
+    height: 100px;
+  }
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid;
+  }
+  
