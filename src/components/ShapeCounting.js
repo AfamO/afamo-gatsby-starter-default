@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import  Button  from "@mui/material/button";
+//import  Button  from "@material-ui/core/Button";
 
 const ShapeCountingGame = () => {
   const [shapes, setShapes] = useState([]); // Stores the currently displayed shapes
@@ -95,7 +95,7 @@ const ShapeCountingGame = () => {
       {gameState === "not_started" && (
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">Shape Counting Game</h1>
-          <Button onClick={startGame}>Start Game</Button>
+          <button onClick={startGame}>Start Game</button>
         </div>
       )}
 
@@ -136,8 +136,8 @@ const ShapeCountingGame = () => {
             ))}
           </div>
           <div>
-            <Button onClick={verifyCounts} className="mr-2">Submit</Button>
-            <Button onClick={resetGame}>Restart</Button>
+            <button onClick={verifyCounts} className="mr-2">Submit</button>
+            <button onClick={resetGame}>Restart</button>
           </div>
           <h2 className="text-lg font-semibold mt-4">Current Score: {score}</h2>
         </div>
