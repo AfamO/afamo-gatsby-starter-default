@@ -59,4 +59,27 @@ p {  font-family: Arial, sans-serif; /* Use a clean, readable font */
     border-right: 50px solid transparent;
     border-bottom: 100px solid;
   }
+
+  .cartoon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .cartoon-image {
+    width: 200px;
+    height: auto;
+    animation: bounce 3s ease-out 1s infinite alternate;
+  }
+
+  /* Define the bounce animation */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0); /* Start and end at the same position */
+    }
+    50% {
+        transform: translateY(-30px); /* Move up */
+    }
+  }
   
