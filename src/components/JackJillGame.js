@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
+import {StaticImage } from 'gatsby-plugin-image';
 import { 
   cartoonImage
 } from './layout.module.css';
+import CustomDynamicImageComponent from "../components/CustomDynamicImageComponent.js";
 
 
 const JackJillMemoryTestGame = () => {
@@ -13,7 +14,7 @@ const JackJillMemoryTestGame = () => {
   const [playerAnswer1, setPlayerAnswer1] = useState(null); // Player's answer to Question 1
   const [playerAnswer2, setPlayerAnswer2] = useState(null); // Player's answer to Question 2
   const [score, setScore] = useState(0);
-  const [currJackImage, setCurrentJackImage] = useState("../images/jack_left_3.jpg"); // Jack's current hand holding the ball
+  const [currJackImage, setCurrentJackImage] = useState("jack_left_1.jpg"); // Jack's current hand holding the ball
 
   // Reset and initialize a new round
   const startNewRound = () => {
@@ -26,7 +27,7 @@ const JackJillMemoryTestGame = () => {
     setPlayerAnswer2(null);
     setCurrentRound(currentRound + 1);
     console.log("RandomSpot==",randomSpot+", Curr Round=="+currentRound+1);
-    setCurrentJackImage("../images/jack_"+randomHand+"_"+randomSpot+".jpg");
+    setCurrentJackImage("jack_"+randomHand+"_"+randomSpot+".jpg");
     //"../images/jack_left_1.jpg"
   };
 
@@ -73,7 +74,7 @@ const JackJillMemoryTestGame = () => {
             />
 
           </div>
-          <p style={{ marginTop: '0.5rem' }}>Holding ball: Left hand</p>
+          <p style={{ marginTop: '0.5rem' }}>Holding ball: Right hand</p>
         </motion.div>
 
         {/* Jack */}
@@ -84,14 +85,10 @@ const JackJillMemoryTestGame = () => {
           transition={{ duration: 0.5 }}
         >
           <div
-            style={{ backgroundColor: '#99cc66', padding: '1rem', borderRadius: '50%' }}
+            style={{ backgroundColor: '#99cc66', padding: '1rem', borderRadius: '10%' }}
           >
             Jack<br/>
-            <GatsbyImage
-            alt = "Jack"
-            image={currJackImage == null ? "../images/jack_left_3.jpg" : currJackImage}
-            className={cartoonImage}
-            />
+            <CustomDynamicImageComponent imageName={currJackImage}  />
           </div>
           <p style={{ marginTop: '0.5rem' }}>Holding ball: {jackHand} hand</p>
           <p>Covers spot: {coveredSpot}</p>
