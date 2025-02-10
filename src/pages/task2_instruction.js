@@ -5,8 +5,8 @@ import Layout from  '../components/layout';
 
 const Task2InstructionPage = () => {
   return (
-    <Layout pageTitle="Shape Counting Game">
-      <h3>Shape Counting Game</h3>
+    <Layout pageTitle="Shape Counting Game Instruction Page">
+      <h3>Welcome to Shape Counting Game</h3>
       
       <p>Now you will <em><strong>play a Shape Counting</strong></em> game <br/>
       but try to remember them in your head.<br/></p>

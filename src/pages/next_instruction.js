@@ -27,7 +27,7 @@ export const Head = () => {
   return (
     <>
     <title>Home Page</title>
-    <meta name="description" content="This is the home page" />
+    <meta name="description" content="This is the task 1 next instruction page" />
     </>
   )
 }

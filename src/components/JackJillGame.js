@@ -53,7 +53,7 @@ const JackJillMemoryTestGame = () => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', backgroundColor: '#f3f3f3' }}>
-      <h1 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1rem' }}>Jack and Jill Memory Test</h1>
+      
       <p style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>Round: {currentRound}</p>
       <p style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>Score: {score}</p>
       <p style={{ fontSize: '1.2rem' }}>Is Jack holding the ball in the same hand as Jill?</p>
