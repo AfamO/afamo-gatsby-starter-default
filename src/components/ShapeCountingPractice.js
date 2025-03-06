@@ -176,7 +176,7 @@ Good luck!
           <p className="text-lg mb-4">Select the count for each shape:</p>
           <div className="mb-4">
             
-        <p>How many <b>circles</b> did you count?</p>
+      <p>How many <b>circles</b> did you count?</p>
       <div>
         {[...Array(8)].map((_, i) => (
           <label key={i} style={{ margin: "5px", display: "inline-block" }}>
@@ -184,7 +184,7 @@ Good luck!
             type="radio"
             name="circles"
             value={i}
-           
+            required
             onChange={() => handleInputChange("circle", i)}
             style={{ marginRight: "5px" }}
           />
@@ -201,7 +201,7 @@ Good luck!
               type="radio"
               name="squares"
               value={i}
-              
+              required
               onChange={() => handleInputChange("square", i)}
               style={{ marginRight: "5px" }}
             />
@@ -218,7 +218,7 @@ Good luck!
               type="radio"
               name="triangles"
               value={i}
-              
+              required
               onChange={() => handleInputChange("triangle", i)}
               style={{ marginRight: "5px" }}
             />

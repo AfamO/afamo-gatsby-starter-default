@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { u } from "framer-motion/client";
 //import  Button  from "@material-ui/core/Button";
 
 const ShapeCountingGame = () => {
@@ -65,6 +66,15 @@ const ShapeCountingGame = () => {
   };
 
   const verifyCounts = () => {
+    //Ensure that every shape was selected before submitting
+    for (const shape of shapeTypes) {
+      if (shapeCounts[shape] ==!0){
+        if (userInput[shape] === 0 ) {
+          alert("Please  kindly select the count for each shape before submitting: '"+shape+"' is not selected");
+          return;
+        } 
+    }
+  }
     const isCorrect = shapeTypes.every(
       (shape) => userInput[shape] === shapeCounts[shape]
     );
@@ -131,7 +141,7 @@ const ShapeCountingGame = () => {
             type="radio"
             name="circles"
             value={i}
-           
+            required
             onChange={() => handleInputChange("circle", i)}
             style={{ marginRight: "5px" }}
           />
@@ -148,7 +158,7 @@ const ShapeCountingGame = () => {
               type="radio"
               name="squares"
               value={i}
-              
+              required
               onChange={() => handleInputChange("square", i)}
               style={{ marginRight: "5px" }}
             />
@@ -161,10 +171,11 @@ const ShapeCountingGame = () => {
       <div>
         {[...Array(8)].map((_, i) => (
           <label key={i} style={{ margin: "5px", display: "inline-block" }}>
-            <input
+            <input 
               type="radio"
               name="triangles"
               value={i}
+              required
               
               onChange={() => handleInputChange("triangle", i)}
               style={{ marginRight: "5px" }}

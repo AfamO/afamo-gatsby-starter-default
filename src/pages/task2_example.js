@@ -8,7 +8,7 @@ const StartTask2Page = () => {
     <Layout pageTitle="Shape Counting Game Example">
       <ShapeCountingGameExample />
       <br/><br/><br/>
-      Click <Link to='/task3_instruction'>Continue</Link> to practice the <strong>Shape Counting</strong> game.<br/>
+      Click <Link to='/task2_practice'>Continue</Link> to practice the <strong>Shape Counting</strong> game.<br/>
     </Layout>
   );
 };
